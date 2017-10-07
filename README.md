@@ -15,4 +15,4 @@ Now only supports physical damage calculation (since I usually do not use a magi
 Also does not support double soul break buff such as さけぶ＋予言の大器.
 
 ## Demo
-http://yangds.synology.me/~lgplab/ffrk/dmgCalc.html
+https://ytingyeu.github.io/ffrkDmgCalc/dmgCalc.html
