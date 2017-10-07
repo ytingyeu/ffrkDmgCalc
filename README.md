@@ -1,6 +1,8 @@
 # ffrkDmgCalc
 
 ## Description
+FFRK 物理ダメージ計算機
+
 A damage calculator for the mobile game "Final Fantasy Record Keeper (Jp ver.)"
 - Calculate the damage rate.
 - Estimate the damage of action "Attack".
