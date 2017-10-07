@@ -1,0 +1,125 @@
+<!--
+File name: dmgCalc.html
+ 
+Description:
+The main page gets user inputs and shows calculated results
+ 
+Copyright (c) 2017-present by Tingyeu Yang
+-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FFRK Damage Calcultor</title>
+<style>
+div{
+    width: 150px;
+    height: 20px;
+    margin: 4px;
+	background-color: lightblue;
+	border: 1px solid black;
+    padding: 2px 2px;
+}	
+</style>
+</head>
+
+<body>
+
+<form id="dmgForm">
+	ATK(Default=1):
+        <input type="number" id="id_ATK">
+    &nbsp&nbsp
+    敵のDEF(Default=1. 凶大体 1500, 滅+ 4000):
+        <input type="number" id="id_DEF">
+        <br /><br />
+        
+    弱点補正:
+        <select id="id_weakPoint">
+            <option value="1">通常</option>
+            <option value="2">弱点</option>
+            <option value="1.5">微弱</option> 
+            <option value="0.5">軽減</option>
+            <option value="0">無効</option>
+            <option value="-1">吸収</option>
+        </select>
+    &nbsp&nbsp
+        
+    弱体化:
+        <select id="id_weaker">
+            <option value="0">なし</option>
+            <option value="0.2">1</option>
+            <option value="0.4">2</option> 
+            <option value="0.6">3</option>
+        </select>
+        <br /><br />
+        
+    属性強化:
+        <input type="checkbox" id="id_element1" value="0.2">属性強化付き武器&nbsp
+        <input type="checkbox" id="id_element2" value="0.5">属性まとい
+        <br /><br />
+    
+    レコマテ属性補正&nbsp(e.g.孤高の若獅子):
+        <input type="checkbox" id="id_RM1" value="0.1">効果:小&nbsp&nbsp
+        <input type="checkbox" id="id_RM2" value="0.2">効果:中&nbsp&nbsp
+        <input type="checkbox" id="id_RM3" value="0.3">効果:大
+        <br /><br />
+        
+    レコマテ弱点&nbsp(e.g.学者の慧眼):
+        <select id="id_rm_weakUp">
+            <option value="0" id="id_weakUp">なし</option>
+            <option value="0.1">小</option>
+            <option value="0.2">中</option> 
+            <option value="0.3">大</option>
+        </select>
+        <br /><br />
+        
+    〇〇装備時にダメージが上昇:
+        <input type="checkbox" id="id_equip1" value="0.1">効果:小&nbsp&nbsp
+        <input type="checkbox" id="id_equip2" value="0.2">効果:中&nbsp&nbsp
+        <input type="checkbox" id="id_equip3" value="0.3">効果:大
+        <br /><br />
+        
+    〇〇アビリティのダメージが上昇: 
+        <input type="checkbox" id="id_ability1" value="0.15">効果:小&nbsp&nbsp
+        <input type="checkbox" id="id_ability2" value="0.25">効果:中&nbsp&nbsp
+        <input type="checkbox" id="id_ability3" value="0.35">効果:大
+        <br /><br />
+        
+    クリティカル補正:
+        <input type="checkbox" id="id_cri1" value="0.5">通常クリティカル&nbsp&nbsp
+        <input type="checkbox" id="id_cri2" value="0.5">ダメージアップ技&nbsp&nbsp
+        <input type="checkbox" id="id_cri3" value="0.5">ダメージアップ状態
+        <br /><br />
+        
+    レコダイ属性のダメージアップ(%):
+        <input type="number" id="id_dive_elementUpPercent">
+        <br /><br />
+    
+    レコダイ弱点をつくとダメージアップ(%):
+        <input type="number" id="id_dive_weakUpPercent">
+        <br /><br />
+
+    レコダイ裝備のダメージアップ(%):
+        <input type="number" id="id_dive_equipUpPercent">
+        <br /><br />
+        
+    レコダイアビリティのダメージアップ(%):
+        <input type="number" id="id_dive_abilityUpPercent">
+        <br /><br />
+    
+    <input type="button" value="Calculate" id="calc"> &nbsp&nbsp
+    <input type="reset" value="Clear" id="clear"><br /><br />
+    
+</form>
+
+    <hr>
+    ダメージ倍率: <div id="outputRate"></div>
+    たたかう概算: <div id="outputAmount"></div>
+	さけぶ(概算 * 1.4): <div id="outputSakebu"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="phyDmg.js"></script>
+    <br /><br />
+</body>
+</html>
+
