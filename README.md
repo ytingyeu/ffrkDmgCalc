@@ -4,7 +4,7 @@
 A damage calculator for the mobile game "Final Fantasy Record Keeper (Jp ver.)"
 - Calculate the damage rate.
 - Estimate the damage of action "Attack".
-- Estimate the damage after soul break buff.
+- Estimate the damage of action "Attack" after soul break buff.
 
 The main reference of the equations is http://yodaru.webcrow.jp/FFRK/damage.php
 
