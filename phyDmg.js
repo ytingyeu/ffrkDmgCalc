@@ -77,7 +77,7 @@ function doCalculate(){
         basic1 = Math.floor(5 + Math.pow(atk, 1.8) * Math.pow(def, -0.5) * power / 100);
     }
     else{
-        basic1 = Math.floor(5 + Math.pow(atk, 0.5) * Math.pow(def, -0.5) * power * 100);
+        basic1 = Math.floor(5 + Math.pow(atk, 0.5) * Math.pow(def, -0.5) * power * 60);
     }    
             
     /*
