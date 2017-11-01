@@ -35,7 +35,7 @@ function initallize(){
     rmWeakUp = parseFloat($("#id_rm_weakUp").val());    
 
     if ( !$("#id_element1").is(":checked") ){ elementBuff1 = 0; } else { elementBuff1 = parseFloat($("#id_element1").val()); }
-    if ( !$("#id_element2").is(":checked") ){ elementBuff2 = 0; } else { elementBuff1 = parseFloat($("#id_element2").val()); }
+    if ( !$("#id_element2").is(":checked") ){ elementBuff2 = 0; } else { elementBuff2 = parseFloat($("#id_element2").val()); }
     
     if ( !$("#id_RM1").is(":checked") ){ rmBuff1 = 0; } else { rmBuff1 = parseFloat($("#id_RM1").val()); }
     if ( !$("#id_RM2").is(":checked") ){ rmBuff2 = 0; } else { rmBuff2 = parseFloat($("#id_RM2").val()); }
